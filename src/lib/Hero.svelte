@@ -35,6 +35,18 @@
 		font-style: italic;
 	}
 
+	a {
+		text-decoration: none;
+		font-family: 'DM Sans', sans-serif;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		text-decoration: none;
+		font-weight: 700;
+		font-style: italic;
+		color: unset;
+		letter-spacing: -0.1rem;
+	}
+
 	.container {
 		height: calc(100vh - 3rem);
 		border: 1.5rem solid #fff;
@@ -56,17 +68,18 @@
 		grid-area: nav-left;
 		place-self: center;
 
-		a {
-			writing-mode: vertical-rl;
-			text-orientation: upright;
-			text-transform: uppercase;
-			text-decoration: none;
+    a {
+			transform: rotate(180deg);
 		}
 	}
 
 	.projects {
 		grid-area: nav-up;
 		place-self: center;
+
+		a {
+			transform: rotate(-90deg);
+		}
 	}
 
 	.contact {

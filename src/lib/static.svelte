@@ -1,19 +1,29 @@
-<div class="overlay"></div>
+<script>
+	const { theme } = $props();
+</script>
+
+<div class={`overlay ${theme}`} />
 
 <style>
 	.overlay {
-		/* Option 1: More contrasting gradient */
-		background: linear-gradient(135deg, #c9eff4 0%, #b4c9e4 100%);
-
-		/* Option 2: Alternative with even more contrast */
-		/* background: linear-gradient(135deg, #d4f0f0 0%, #a5c0e3 100%); */
-
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100vh;
 		z-index: -1;
+	}
+
+	.default {
+		background: linear-gradient(135deg, #c9eff4 0%, #b4c9e4 100%);
+	}
+
+	.alt1 {
+		background: linear-gradient(135deg, #f4e7c9 0%, #e4b4b4 100%);
+	}
+
+	.alt2 {
+		background: linear-gradient(135deg, #e7c9f4 0%, #b4e4d1 100%);
 	}
 
 	.overlay::after {
