@@ -2,7 +2,6 @@
 	import '../global.css';
 	import Static from '$lib/static.svelte';
 	import { fade } from 'svelte/transition';
-	import { slideRight, slideLeft } from '$lib/utilities/flyPageTransition';
 	let { data, children } = $props();
 </script>
 
@@ -10,7 +9,7 @@
 
 <div class="container">
 	{#key data.pathname}
-		<div in:fade={{ duration: 300, delay: 400 }} out:fade={{ duration: 300 }}>
+		<div in:fade={{ duration: 500, delay: 600 }} out:data.transition>
 			{@render children()}
 		</div>
 	{/key}

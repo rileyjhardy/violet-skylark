@@ -1,6 +1,8 @@
 <div class="projects">
-	<div>other content</div>
-	<a aria-label="home" href="/">home</a>
+	<div>
+		other content
+		<a aria-label="home" href="/">home</a>
+	</div>
 	<h2>Projects</h2>
 </div>
 
