@@ -9,7 +9,7 @@
 <style>
 	.contact {
 		height: calc(100vh - 3rem);
-		border: 1.5rem solid #fff;
+		border: 1.5rem solid var(--border-color);
 		display: grid;
 		grid-template-columns: 200px 1fr;
 		place-items: center;

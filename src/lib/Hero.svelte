@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="hero">
 		<h1>Riley J. Hardy</h1>
-		<h2>fullstack engineer</h2>
+		<h2>fullstack developer</h2>
 	</div>
 
 	<div class="about">
@@ -21,10 +21,10 @@
 <style>
 	h1 {
 		font-family: 'DM Sans', sans-serif;
-		letter-spacing: -0.7rem;
+		letter-spacing: -0.8rem;
 		font-weight: 700;
 		font-size: 10rem;
-		animation: blur-in 500ms ease;
+		animation: blur-in 500ms 300ms ease both;
 		margin: 0;
 	}
 
@@ -49,7 +49,7 @@
 
 	.container {
 		height: calc(100vh - 3rem);
-		border: 1.5rem solid #fff;
+		border: 1.5rem solid var(--border-color);
 		display: grid;
 		grid-template-columns: 100px 1fr 100px;
 		grid-template-rows: 100px 1fr 100px;
@@ -68,7 +68,7 @@
 		grid-area: nav-left;
 		place-self: center;
 
-    a {
+		a {
 			transform: rotate(180deg);
 		}
 	}

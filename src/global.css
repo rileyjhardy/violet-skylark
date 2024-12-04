@@ -1,3 +1,7 @@
+:root {
+	--border-color: rgba(255, 255, 255);
+}
+
 html,
 body {
 	margin: 0;
@@ -11,4 +15,16 @@ h4,
 h5,
 h6 {
 	font-family: 'DM Sans', sans-serif;
+}
+
+@property --gradient-color-1 {
+	syntax: '<color>';
+	initial-value: #ff9a9e;
+	inherits: true;
+}
+
+@property --gradient-color-2 {
+	syntax: '<color>';
+	initial-value: #fad0c4;
+	inherits: true;
 }

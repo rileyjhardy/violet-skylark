@@ -1,8 +1,4 @@
-<script>
-	const { theme } = $props();
-</script>
-
-<div class={`overlay ${theme}`} />
+<div class="overlay"></div>
 
 <style>
 	.overlay {
@@ -12,18 +8,14 @@
 		width: 100%;
 		height: 100vh;
 		z-index: -1;
-	}
-
-	.default {
-		background: linear-gradient(135deg, #c9eff4 0%, #b4c9e4 100%);
-	}
-
-	.alt1 {
-		background: linear-gradient(135deg, #f4e7c9 0%, #e4b4b4 100%);
-	}
-
-	.alt2 {
-		background: linear-gradient(135deg, #e7c9f4 0%, #b4e4d1 100%);
+		transition:
+			--gradient-color-1 0.3s ease,
+			--gradient-color-2 0.3s ease;
+		background-image: linear-gradient(
+			135deg,
+			var(--gradient-color-1) 0%,
+			var(--gradient-color-2) 100%
+		);
 	}
 
 	.overlay::after {

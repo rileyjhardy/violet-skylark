@@ -4,8 +4,6 @@ import { slideRight, slideDown, slideUp, slideLeft } from '$lib/utilities/slideT
 export const load = ({ url }) => {
 	const { pathname } = url;
 
-	console.log(pathname);
-
 	const positionMap = {
 		'/': fade,
 		'/about': slideRight,
