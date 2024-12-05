@@ -9,8 +9,8 @@
 		height: 100vh;
 		z-index: -1;
 		transition:
-			--gradient-color-1 0.3s ease,
-			--gradient-color-2 0.3s ease;
+			--gradient-color-1 500ms ease,
+			--gradient-color-2 500ms ease;
 		background-image: linear-gradient(
 			135deg,
 			var(--gradient-color-1) 0%,

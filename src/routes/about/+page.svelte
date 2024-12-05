@@ -25,5 +25,7 @@
 		text-orientation: upright;
 		font-size: 8rem;
 		place-self: center;
+		/* animation: vibrate 1s linear infinite;
+    filter: blur(1px) */
 	}
 </style>

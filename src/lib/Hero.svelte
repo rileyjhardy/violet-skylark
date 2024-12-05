@@ -26,6 +26,7 @@
 		font-size: 10rem;
 		animation: blur-in 500ms 300ms ease both;
 		margin: 0;
+		/* filter: blur(1px); */
 	}
 
 	h2 {

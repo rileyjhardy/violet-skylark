@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '../global.css';
 	import Static from '$lib/static.svelte';
-	import { fade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
+	import { slideLeft, slideRight, slideUp, slideDown } from '$lib/utilities/slideTransistions';
 	import { config } from '$lib/state/theme.svelte';
 	import { onMount } from 'svelte';
 
@@ -26,11 +27,6 @@
 
 	$effect(() => {
 		delayTheme(data.pathname);
-	});
-
-	onMount(() => {
-		document.documentElement.style.setProperty('--gradient-color-1', config['default'].start);
-		document.documentElement.style.setProperty('--gradient-color-2', config['default'].end);
 	});
 </script>
 

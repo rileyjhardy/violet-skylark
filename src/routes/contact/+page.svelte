@@ -21,6 +21,8 @@
 			place-self: center;
 			writing-mode: vertical-rl;
 			text-orientation: upright;
+			/* animation: vibrate 1s linear infinite;
+			filter: blur(1px); */
 		}
 	}
 </style>
