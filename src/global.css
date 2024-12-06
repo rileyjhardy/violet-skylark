@@ -1,5 +1,10 @@
 :root {
-	--border-color: rgba(255, 255, 255);
+	--border-color: rgba(255, 255, 255, 0.5);
+	--border-width: 1.5rem;
+
+	@media (max-width: 768px) {
+		--border-width: 0.75rem;
+	}
 }
 
 html,
@@ -14,6 +19,10 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: 'DM Sans', sans-serif;
+}
+
+p {
 	font-family: 'DM Sans', sans-serif;
 }
 
@@ -32,15 +41,37 @@ h6 {
 /* Animations */
 
 @keyframes vibrate {
-  0% { transform: translate(0); }
-  10% { transform: translate(-2px, 1px); }
-  20% { transform: translate(1px, -1px); }
-  30% { transform: translate(-1px, -2px); }
-  40% { transform: translate(2px, 1px); }
-  50% { transform: translate(-1px, 2px); }
-  60% { transform: translate(1px, -1px); }
-  70% { transform: translate(-2px, 1px); }
-  80% { transform: translate(1px, 2px); }
-  90% { transform: translate(-1px, -1px); }
-  100% { transform: translate(0); }
+	0% {
+		transform: translate(0);
+	}
+	10% {
+		transform: translate(-2px, 1px);
+	}
+	20% {
+		transform: translate(1px, -1px);
+	}
+	30% {
+		transform: translate(-1px, -2px);
+	}
+	40% {
+		transform: translate(2px, 1px);
+	}
+	50% {
+		transform: translate(-1px, 2px);
+	}
+	60% {
+		transform: translate(1px, -1px);
+	}
+	70% {
+		transform: translate(-2px, 1px);
+	}
+	80% {
+		transform: translate(1px, 2px);
+	}
+	90% {
+		transform: translate(-1px, -1px);
+	}
+	100% {
+		transform: translate(0);
+	}
 }

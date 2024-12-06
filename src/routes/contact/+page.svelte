@@ -1,15 +1,15 @@
 <div class="contact">
 	<h2>Contact</h2>
 	<div>
-		other content
+		<h3>Need some help with your project?</h3>
 		<a aria-label="home" href="/">home</a>
 	</div>
 </div>
 
 <style>
 	.contact {
-		height: calc(100vh - 3rem);
-		border: 1.5rem solid var(--border-color);
+		height: calc(100vh - (var(--border-width) * 2));
+		border: var(--border-width) var(--border-color) solid;
 		display: grid;
 		grid-template-columns: 200px 1fr;
 		place-items: center;

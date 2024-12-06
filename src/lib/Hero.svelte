@@ -24,7 +24,7 @@
 		letter-spacing: -0.8rem;
 		font-weight: 700;
 		font-size: 10rem;
-		animation: blur-in 500ms 300ms ease both;
+		animation: blur-in 700ms 300ms ease both;
 		margin: 0;
 		/* filter: blur(1px); */
 	}
@@ -49,8 +49,8 @@
 	}
 
 	.container {
-		height: calc(100vh - 3rem);
-		border: 1.5rem solid var(--border-color);
+		height: calc(100vh - (var(--border-width) * 2));
+		border: var(--border-width) var(--border-color) solid;
 		display: grid;
 		grid-template-columns: 100px 1fr 100px;
 		grid-template-rows: 100px 1fr 100px;

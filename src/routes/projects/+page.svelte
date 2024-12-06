@@ -8,8 +8,8 @@
 
 <style>
 	.projects {
-		height: calc(100vh - 3rem);
-		border: 1.5rem solid var(--border-color);
+		height: calc(100vh - (var(--border-width) * 2));
+		border: var(--border-width) var(--border-color) solid;
 		display: grid;
 		grid-template-rows: 1fr 200px;
 		place-items: center;
