@@ -1,6 +1,8 @@
 :root {
 	--border-color: rgba(255, 255, 255, 0.5);
 	--border-width: 1.5rem;
+	--mobile-padding: 1rem;
+	--page-height: calc(100vh - (var(--border-width) * 2));
 
 	@media (max-width: 768px) {
 		--border-width: 0.75rem;

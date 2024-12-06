@@ -8,7 +8,7 @@
 
 <style>
 	.contact {
-		height: calc(100vh - (var(--border-width) * 2));
+		height: var(--page-height);
 		border: var(--border-width) var(--border-color) solid;
 		display: grid;
 		grid-template-columns: 200px 1fr;
