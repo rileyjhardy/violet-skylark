@@ -1,15 +1,13 @@
 <script lang="ts">
 	import '../global.css';
 	import Static from '$lib/static.svelte';
-	import { fade, fly } from 'svelte/transition';
-	import { slideLeft, slideRight, slideUp, slideDown } from '$lib/utilities/slideTransistions';
+	import { fade } from 'svelte/transition';
 	import { config } from '$lib/state/theme.svelte';
-	import { onMount } from 'svelte';
 
 	let { data, children } = $props();
 
 	const themeMap: Record<string, string> = {
-		'/': 'sunset-vibes',
+		'/': 'winter-neva',
 		'/about': 'warm-flame',
 		'/projects': 'mint-leaf',
 		'/contact': 'dusty-grass'

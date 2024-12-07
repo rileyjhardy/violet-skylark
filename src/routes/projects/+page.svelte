@@ -1,3 +1,12 @@
+<script>
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		// This ensures the component is properly hydrated on the client
+		console.log('projects mounted');
+	});
+</script>
+
 <div class="projects">
 	<div>
 		other content
@@ -13,6 +22,12 @@
 		display: grid;
 		grid-template-rows: 1fr 200px;
 		place-items: center;
+
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
 	}
 
 	h2 {
@@ -20,7 +35,13 @@
 		text-transform: uppercase;
 		font-size: 8rem;
 		place-self: center;
-		/* animation: vibrate 1s linear infinite;
-		filter: blur(1px); */
+
+		@media (max-width: 768px) {
+			font-size: 5rem;
+			letter-spacing: -0.7rem;
+			font-style: italic;
+			margin: 0;
+			animation: blur-in 500ms ease;
+		}
 	}
 </style>

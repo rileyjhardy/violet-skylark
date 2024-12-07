@@ -21,8 +21,22 @@
 			place-self: center;
 			writing-mode: vertical-rl;
 			text-orientation: upright;
-			/* animation: vibrate 1s linear infinite;
-			filter: blur(1px); */
+		}
+
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: space-between;
+
+			h2 {
+				font-size: 5rem;
+				letter-spacing: -0.3rem;
+				text-orientation: initial;
+				writing-mode: horizontal-tb;
+				font-style: italic;
+				margin: 0;
+				animation: blur-in 500ms ease;
+			}
 		}
 	}
 </style>

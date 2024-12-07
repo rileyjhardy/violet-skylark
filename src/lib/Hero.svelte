@@ -1,20 +1,22 @@
 <script lang="ts">
+	import { fade, fly } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
 </script>
 
 <div class="container">
 	<div class="hero">
-		<h1>Riley J. Hardy</h1>
+		<h1 class="blur-in">RileyHardy</h1>
 		<h2>fullstack developer</h2>
 	</div>
 
 	<nav>
-		<div class="about">
+		<div in:fly={{ x: -25, delay: 700, easing: cubicOut }} class="about nav-item">
 			<a aria-label="about" href="/about">about</a>
 		</div>
-		<div class="projects">
+		<div in:fly={{ x: 25, delay: 900, easing: cubicOut }} class="projects nav-item">
 			<a aria-label="projects" href="/projects">projects</a>
 		</div>
-		<div class="contact">
+		<div in:fly={{ x: -25, delay: 1100, easing: cubicOut }} class="contact nav-item">
 			<a aria-label="contact" href="/contact">contact</a>
 		</div>
 	</nav>
@@ -26,13 +28,12 @@
 		letter-spacing: -0.8rem;
 		font-weight: 700;
 		font-size: 10rem;
-		animation: blur-in 700ms 300ms ease both;
 		margin: 0;
-		/* filter: blur(1px); */
 
 		@media (max-width: 768px) {
-			font-size: 4rem;
+			font-size: 5rem;
 			letter-spacing: -0.3rem;
+			margin-top: -1rem;
 		}
 	}
 
@@ -162,21 +163,20 @@
 		filter: blur(0);
 	}
 
-	@keyframes blur-in {
-		0% {
-			filter: blur(50px);
-			opacity: 0;
-			transform: scale(1.1) translateX(100px);
-		}
+	:global(.blur-in) {
+		animation: blur-in 500ms ease;
+	}
 
-		50% {
-			transform: translateX(-50px);
-		}
-
-		100% {
-			filter: blur(0);
-			opacity: 1;
-			transform: scale(1) translateX(0);
+	@media (max-width: 768px) {
+		.container::after {
+			z-index: -1;
+			content: '';
+			position: absolute;
+			top: var(--border-width);
+			left: var(--border-width);
+			right: var(--border-width);
+			bottom: var(--border-width);
+			border: calc(var(--border-width) * 2.5) var(--border-color) solid;
 		}
 	}
 </style>

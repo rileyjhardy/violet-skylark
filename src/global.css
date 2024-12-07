@@ -25,7 +25,8 @@ h6 {
 }
 
 p {
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2.5rem;
 }
 
 @property --gradient-color-1 {
@@ -75,5 +76,23 @@ p {
 	}
 	100% {
 		transform: translate(0);
+	}
+}
+
+@keyframes blur-in {
+	0% {
+		filter: blur(50px);
+		opacity: 0;
+		transform: scale(1.1) translateX(100px);
+	}
+
+	50% {
+		transform: translateX(-50px);
+	}
+
+	100% {
+		filter: blur(0);
+		opacity: 1;
+		transform: scale(1) translateX(0);
 	}
 }

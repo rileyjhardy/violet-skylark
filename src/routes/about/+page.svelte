@@ -5,20 +5,15 @@
 <div class="about">
 	<div class="about__text">
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-			laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-			voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-		</p>
-		<p>
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-			id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-			doloremque laudantium.
+			Hey there! I'm a web developer who geeks out over coding and loves turning digital ideas into
+			reality. When I'm not creating awesome websites, you'll probably find me catching the latest
+			movie or hanging with my friends. Tech is my passion, and I'm all about using my skills to
+			make cool stuff that helps people.
 		</p>
 		<a href="/">home</a>
 	</div>
 
-	<h2 in:fade={{ duration: 1000 }}>About</h2>
+	<h2>About</h2>
 </div>
 
 <style>
@@ -27,11 +22,24 @@
 		border: var(--border-width) var(--border-color) solid;
 		display: grid;
 		grid-template-columns: 1fr 200px;
+
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
 	}
 
 	.about__text {
 		padding: 5rem;
 		place-content: center;
+
+		@media (max-width: 768px) {
+			padding: 2rem;
+			p {
+				font-size: 1.5rem;
+			}
+		}
 	}
 
 	h2 {
@@ -41,7 +49,15 @@
 		text-orientation: upright;
 		font-size: 8rem;
 		place-self: center;
-		/* animation: vibrate 1s linear infinite;
-    filter: blur(1px) */
+
+		@media (max-width: 768px) {
+			font-size: 5rem;
+			writing-mode: horizontal-tb;
+			text-orientation: initial;
+			letter-spacing: -0.7rem;
+			font-style: italic;
+			margin: 0;
+			animation: blur-in 500ms ease;
+		}
 	}
 </style>
