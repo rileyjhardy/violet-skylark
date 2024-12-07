@@ -24,7 +24,7 @@
 	}
 
 	$effect(() => {
-		delayTheme(data.pathname); 
+		delayTheme(data.pathname);
 	});
 </script>
 
