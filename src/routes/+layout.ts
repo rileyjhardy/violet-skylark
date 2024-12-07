@@ -16,3 +16,5 @@ export const load = ({ url }) => {
 		transition: positionMap[pathname as keyof typeof positionMap]
 	};
 };
+
+export const prerender = true;
