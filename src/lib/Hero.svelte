@@ -23,12 +23,16 @@
 </div>
 
 <style>
-	h1 {
+	/* Base typography */
+	h1, h2 {
 		font-family: 'DM Sans', sans-serif;
+		margin: 0;
+	}
+
+	h1 {
 		letter-spacing: -0.8rem;
 		font-weight: 700;
 		font-size: 10rem;
-		margin: 0;
 
 		@media (max-width: 768px) {
 			font-size: 5rem;
@@ -38,50 +42,12 @@
 	}
 
 	h2 {
-		font-family: 'DM Sans', sans-serif;
 		letter-spacing: -0.1rem;
 		text-transform: uppercase;
 		font-style: italic;
 	}
 
-	a {
-		text-decoration: none;
-		font-family: 'DM Sans', sans-serif;
-		writing-mode: vertical-rl;
-		text-orientation: mixed;
-		text-decoration: none;
-		font-weight: 700;
-		font-style: italic;
-		color: unset;
-		letter-spacing: -0.1rem;
-
-		@media (max-width: 768px) {
-			writing-mode: unset;
-			text-orientation: unset;
-		}
-	}
-
-	nav {
-		display: contents;
-
-		@media (max-width: 768px) {
-			display: flex;
-			flex-direction: column;
-
-			a {
-				font-size: 5rem;
-			}
-
-			div {
-				line-height: 0.8;
-			}
-
-			div:nth-child(odd) {
-				text-align: right;
-			}
-		}
-	}
-
+	/* Layout */
 	.container {
 		height: var(--page-height);
 		border: var(--border-width) var(--border-color) solid;
@@ -95,9 +61,6 @@
 
 		@media (max-width: 768px) {
 			padding: var(--mobile-padding);
-			grid-template-columns: unset;
-			grid-template-rows: unset;
-			grid-template-areas: unset;
 			display: flex;
 			flex-direction: column;
 			height: calc(100vh - (var(--mobile-padding) * 2) - var(--border-width) * 2);
@@ -105,6 +68,43 @@
 		}
 	}
 
+	/* Navigation */
+	nav {
+		display: contents;
+
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+
+			a {
+				font-size: 5rem;
+			}
+			div {
+				line-height: 0.8;
+			}
+			div:nth-child(odd) {
+				text-align: right;
+			}
+		}
+	}
+
+	a {
+		font-family: 'DM Sans', sans-serif;
+		text-decoration: none;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		font-weight: 700;
+		font-style: italic;
+		color: unset;
+		letter-spacing: -0.1rem;
+
+		@media (max-width: 768px) {
+			writing-mode: unset;
+			text-orientation: unset;
+		}
+	}
+
+	/* Grid positioning */
 	.hero {
 		grid-area: hero;
 		place-self: center;
@@ -114,14 +114,18 @@
 		}
 	}
 
-	.about {
-		grid-area: nav-left;
+	/* Navigation items - shared styles */
+	.about, .projects, .contact {
 		place-self: center;
 
 		@media (max-width: 768px) {
 			place-self: unset;
 		}
+	}
 
+	/* Navigation items - specific positions */
+	.about {
+		grid-area: nav-left;
 		a {
 			transform: rotate(180deg);
 		}
@@ -129,30 +133,15 @@
 
 	.projects {
 		grid-area: nav-up;
-		place-self: center;
-
-		@media (max-width: 768px) {
-			place-self: unset;
-		}
-
-		a {
-			transform: rotate(-90deg);
-		}
+		a { transform: rotate(-90deg); }
 	}
 
 	.contact {
 		grid-area: nav-right;
-		place-self: center;
-
-		@media (max-width: 768px) {
-			place-self: unset;
-		}
-
-		a {
-			transform: rotate(-90deg);
-		}
+		a { transform: rotate(-90deg); }
 	}
 
+	/* Animation states */
 	.unfocused {
 		transform: scale(0.95);
 		filter: blur(10px);
@@ -167,6 +156,7 @@
 		animation: blur-in 500ms ease;
 	}
 
+	/* Mobile border decoration */
 	@media (max-width: 768px) {
 		.container::after {
 			z-index: -1;
