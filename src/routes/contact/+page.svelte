@@ -1,8 +1,12 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <div class="contact">
 	<h2>Contact</h2>
 	<div>
 		<h3>Need some help with your project?</h3>
-		<a aria-label="home" href="/">home</a>
+		<a aria-label="home" href={`${base}/`}>home</a>
 	</div>
 </div>
 

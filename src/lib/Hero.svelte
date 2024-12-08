@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
+  import { base } from '$app/paths';
 </script>
 
 <div class="container">
@@ -11,13 +12,13 @@
 
 	<nav>
 		<div in:fly={{ x: -25, delay: 700, easing: cubicOut }} class="about nav-item">
-			<a aria-label="about" href="/about">about</a>
+			<a aria-label="about" href={`${base}/about`}>about</a>
 		</div>
 		<div in:fly={{ x: 25, delay: 900, easing: cubicOut }} class="projects nav-item">
-			<a aria-label="projects" href="/projects">projects</a>
+			<a aria-label="projects" href={`${base}/projects`}>projects</a>
 		</div>
 		<div in:fly={{ x: -25, delay: 1100, easing: cubicOut }} class="contact nav-item">
-			<a aria-label="contact" href="/contact">contact</a>
+			<a aria-label="contact" href={`${base}/contact`}>contact</a>
 		</div>
 	</nav>
 </div>

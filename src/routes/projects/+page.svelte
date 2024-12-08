@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 
 	onMount(() => {
 		// This ensures the component is properly hydrated on the client
@@ -10,7 +11,7 @@
 <div class="projects">
 	<div>
 		other content
-		<a aria-label="home" href="/">home</a>
+		<a aria-label="home" href={`${base}/`}>home</a>
 	</div>
 	<h2>Projects</h2>
 </div>

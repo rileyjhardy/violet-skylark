@@ -1,5 +1,6 @@
 <script>
 	import { fade } from 'svelte/transition';
+	import { base } from '$app/paths';
 </script>
 
 <div class="about">
@@ -10,7 +11,7 @@
 			movie or hanging with my friends. Tech is my passion, and I'm all about using my skills to
 			make cool stuff that helps people.
 		</p>
-		<a href="/">home</a>
+		<a href={`${base}/`}>home</a>
 	</div>
 
 	<h2>About</h2>
