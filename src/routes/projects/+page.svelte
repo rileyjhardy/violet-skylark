@@ -1,23 +1,18 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
-
-	onMount(() => {
-		// This ensures the component is properly hydrated on the client
-		console.log('projects mounted');
-	});
 </script>
 
 <div class="projects">
 	<div>
-		other content
-		<a aria-label="home" href={`${base}/`}>home</a>
+		<a target="_blank" href="https://michaelkelleyfilm.com">michaelkelleyfilm.com</a>
 	</div>
 	<h2>Projects</h2>
+	<a class="back" aria-label="home" href={`${base}/`}>home &gt;&gt;</a>
 </div>
 
 <style>
 	.projects {
+		position: relative;
 		height: var(--page-height);
 		border: var(--border-width) var(--border-color) solid;
 		display: grid;
@@ -26,8 +21,8 @@
 
 		@media (max-width: 768px) {
 			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
+			flex-direction: column-reverse;
+			justify-content: flex-end;
 		}
 	}
 
@@ -42,7 +37,20 @@
 			letter-spacing: -0.7rem;
 			font-style: italic;
 			margin: 0;
+			margin-top: 2rem;
 			animation: blur-in 500ms ease;
 		}
+	}
+
+	.back {
+		color: unset;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-weight: bold;
+		font-style: italic;
+		font-family: 'DM Sans', sans-serif;
+		text-transform: uppercase;
+		text-decoration: none;
 	}
 </style>

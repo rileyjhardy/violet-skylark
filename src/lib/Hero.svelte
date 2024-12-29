@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
-  import { base } from '$app/paths';
+	import { base } from '$app/paths';
 </script>
 
 <div class="container">
@@ -25,7 +25,8 @@
 
 <style>
 	/* Base typography */
-	h1, h2 {
+	h1,
+	h2 {
 		font-family: 'DM Sans', sans-serif;
 		margin: 0;
 	}
@@ -50,11 +51,11 @@
 
 	/* Layout */
 	.container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 		border: var(--border-width) var(--border-color) solid;
 		display: grid;
 		grid-template-columns: 100px 1fr 100px;
@@ -119,7 +120,9 @@
 	}
 
 	/* Navigation items - shared styles */
-	.about, .projects, .contact {
+	.about,
+	.projects,
+	.contact {
 		place-self: center;
 
 		@media (max-width: 768px) {
@@ -137,12 +140,16 @@
 
 	.projects {
 		grid-area: nav-up;
-		a { transform: rotate(-90deg); }
+		a {
+			transform: rotate(-90deg);
+		}
 	}
 
 	.contact {
 		grid-area: nav-right;
-		a { transform: rotate(-90deg); }
+		a {
+			transform: rotate(0deg);
+		}
 	}
 
 	/* Animation states */
@@ -165,11 +172,11 @@
 		.container::after {
 			z-index: -1;
 			content: '';
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      /* right: calc(var(--mobile-padding) * -1);
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			/* right: calc(var(--mobile-padding) * -1);
       top: calc(var(--mobile-padding) * -1);
       bottom: calc(var(--mobile-padding) * -1); */
 			position: absolute;

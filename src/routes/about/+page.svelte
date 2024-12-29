@@ -11,14 +11,15 @@
 			movie or hanging with my friends. Tech is my passion, and I'm all about using my skills to
 			make cool stuff that helps people.
 		</p>
-		<a href={`${base}/`}>home</a>
 	</div>
+	<a class="back" href={`${base}/`}>home &gt;&gt;</a>
 
 	<h2>About</h2>
 </div>
 
 <style>
 	.about {
+		position: relative;
 		height: var(--page-height);
 		border: var(--border-width) var(--border-color) solid;
 		display: grid;
@@ -26,8 +27,8 @@
 
 		@media (max-width: 768px) {
 			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
+			flex-direction: column-reverse;
+			justify-content: flex-end;
 		}
 	}
 
@@ -58,7 +59,20 @@
 			letter-spacing: -0.7rem;
 			font-style: italic;
 			margin: 0;
+			margin-top: 2rem;
 			animation: blur-in 500ms ease;
 		}
+	}
+
+	.back {
+		color: unset;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		text-decoration: none;
+		font-weight: bold;
+		font-style: italic;
+		text-transform: uppercase;
+		font-family: 'DM Sans', sans-serif;
 	}
 </style>
