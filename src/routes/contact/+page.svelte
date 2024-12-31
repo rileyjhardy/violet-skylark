@@ -6,8 +6,8 @@
 	<h2>Contact</h2>
 	<div class="content">
 		<h3>Need some help with your project? Send me a message!</h3>
-		<a class="links" href="mailto:me@rileyhardy.com">
-			<p>me@rileyhardy.com</p>
+		<a class="links" href="mailto:dev@rileyhardy.com">
+			<p>dev@rileyhardy.com</p>
 		</a>
 		<a class="links" href="tel:+14792207116">
 			<p>479-220-7116</p>
